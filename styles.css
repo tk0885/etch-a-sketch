@@ -1,0 +1,96 @@
+.flex-container {
+    height: 100vh; /*always takes up fullscreen*/
+    width: 100vw; /*always takes up fullscreen*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgba(96, 79, 252, 0.082), white); /*has to be background and not background-color*/
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60vw;
+    height: 60vw; /*instead of vh(viewport height) use same as width to always keep it a square because height and width of screen are usually not the same*/
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.mode {
+    margin-bottom: 30px;
+}
+
+.board {
+    height: 80%;
+    width: 80%;
+    display: grid;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.board:hover {
+    cursor: pointer; /*mouse cursor becomes a little hand*/
+}
+
+/* .title {
+    display: flex;
+    justify-content: center;
+} */
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.blackButton {
+    background-color: black;
+    color: white;
+}
+
+.blackButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.randomButton {
+    background: linear-gradient(0.25turn, #f65cfc, #ebf8e1, #583cf6); /*has to be background and not background-color*/
+}
+
+.randomButton:hover {
+    background: linear-gradient(0.25turn, #20ff02, #ebf8e1, #aecc03);
+}
+
+.eraserButton {
+    background-color: white;
+    color: black;
+}
+
+.eraserButton:hover {
+    background-color: white;
+    color: white;
+}
+
+input {
+    width: 50px;
+}
+
+.error {
+    display: none; /*hides display message when page is first reloaded*/
+}
